@@ -107,23 +107,26 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 2rem;
-    margin: 0;
-    place-items: center;
+    margin: 0 calc(100% - 80%);
   }
 
   .card-supervisor {
     grid-area: 2 / 1 / 4 / 2;
+    width: 350px;
   }
 
   .card-team {
     grid-area: 1 / 2 / 3 / 3;
+    width: 350px;
   }
 
   .card-karma {
     grid-area: 3 / 2 / 5 / 3;
+    width: 350px;
   }
 
   .card-calculator {
     grid-area: 2 / 3 / 4 / 4;
+    width: 350px;
   }
 }
