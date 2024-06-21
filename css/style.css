@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --RED: hsl(0, 78%, 62%);
+  --CYAN: hsl(180, 62%, 55%);
+  --ORANGE: hsl(34, 97%, 64%);
+  --BLUE: hsl(212, 86%, 64%);
+
+  --VERYDARKBLUE: hsl(234, 12%, 34%);
+  --GRAYISHBLUE: hsl(229, 6%, 66%);
+  --VERYLIGHTGRAY: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--VERYLIGHTGRAY);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+header {
+  text-align: center;
+  padding-top: 4.5rem;
+  margin: 0 2rem;
+}
+
+header h1 .h1-first-part {
+  color: var(--VERYDARKBLUE);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+header h1 .h1-second-part {
+  color: var(--VERYDARKBLUE);
+  font-size: 2rem;
+}
+
+header p {
+  color: var(--GRAYISHBLUE);
+  font-size: 1.1rem;
+  margin-bottom: 4.5rem;
+  padding-top: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0 2rem 4rem 2rem;
+}
+
+.card {
+  background-color: var(--VERYLIGHTGRAY);
+  padding: 2rem;
+  border-top: 5px solid;
+  box-shadow: 0px 10px 20px hsla(234, 12%, 34%, 0.2);
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+.card p {
+  color: var(--GRAYISHBLUE);
+  font-size: 0.8rem;
+  line-height: 1.7rem;
+  margin: 0.5rem 0 2rem 0;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+}
+
+.card-supervisor {
+  border-top-color: var(--CYAN);
+}
+
+.card-team {
+  border-color: var(--RED);
+}
+
+.card-karma {
+  border-top-color: var(--ORANGE);
+}
+
+.card-calculator {
+  border-top-color: var(--BLUE);
+}
+
+@media (min-width: 680px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    justify-content: center;
+    margin-inline: max(0px, 50% - 800px/2);
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 0;
+    place-items: center;
+  }
+
+  .card-supervisor {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+
+  .card-team {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  .card-karma {
+    grid-area: 3 / 2 / 5 / 3;
+  }
+
+  .card-calculator {
+    grid-area: 2 / 3 / 4 / 4;
+  }
+}
